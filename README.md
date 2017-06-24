@@ -1,5 +1,7 @@
 # A C++ implementation for using Prolog in ROS
 
+![ros](https://img.shields.io/badge/ROS-Kinetic-brightgreen.svg)
+
 ## Overview
 
 **Author(s): Ralf Kaestner</br>
@@ -18,26 +20,26 @@ This project provides a ROS server/client interface to Prolog.
   ```
   sudo apt-get install swi-prolog
   ```
- 
+
 - [jsoncpp](https://github.com/open-source-parsers/jsoncpp)
 
   ```
   sudo apt-get install libjsoncpp-dev
   ```
 
+- [roscpp-nodewrap](https://github.com/ethz-asl/roscpp-nodewrap)
+
+  ```shell
+  cd <path_to_your_catkin_space>
+  git clone https://github.com/ethz-asl/roscpp-nodewrap.git
+  ```
+
 ### Building
 
-Create a symlink in your catkin source folder, e.g.:
-
-  ```
-  ln -s ~/git/ros-prolog ~/catkin_ws/src
-  ```
-
-If you just need certain packages of this project:
-
-  ```
-  ln -s ~/git/ros-prolog/name_of_the_package ~/catkin_ws/src
-  ```
+```
+cd <path_to_your_catkin_space>
+catkin_make
+```
 
 ## Usage
 
