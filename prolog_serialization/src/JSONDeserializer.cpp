@@ -132,7 +132,7 @@ Program JSONDeserializer::valueToProgram(const Json::Value& value) const {
   if (value.isArray()) {
     std::list<Clause> clauses;
     
-    for (Json::Value::iterator it = value.begin(); it != value.end(); ++it)
+    for (Json::Value::const_iterator it = value.begin(); it != value.end(); ++it)
       clauses.push_back(valueToClause(*it));
     
     return Program(clauses);
@@ -250,7 +250,7 @@ Term JSONDeserializer::valueToTerm(const Json::Value& value) const {
   else if (value.isArray()) {
     std::list<Term> elements;
     
-    for (Json::Value::iterator it = value.begin(); it != value.end(); ++it)
+    for (Json::Value::const_iterator it = value.begin(); it != value.end(); ++it)
       elements.push_back(valueToTerm(*it));
     
     return Term(elements);
